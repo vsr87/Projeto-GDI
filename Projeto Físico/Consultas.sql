@@ -44,10 +44,12 @@ FROM Funcionarios
 WHERE Salario = (SELECT MAX(Salario) FROM Funcionarios);
 
 
--- Subconsulta do tipo linha -- Projetar os dados da academia há mais tempo aberta e seus dados
-SELECT A.*, TRUNC(SYSDATE - A.Data_Abertura) AS Dias_Aberta
-FROM Academia A
-WHERE A.Data_Abertura = (SELECT MIN(Data_Abertura) FROM Academia);
+-- Subconsulta do tipo linha -- Projetar o funcionário que trabalha na mesma academia e recebe o mesmo que o funcionário de CPF "11111111"
+SELECT F.Nome
+FROM Funcionarios F
+WHERE (F.ID_Academia,F.Salario) = 
+        (SELECT F.ID_Academia,F.Salario FROM Funcionarios F
+        WHERE F.CPF_Func ='11111111');
 
 
 -- Subconsulta do tipo tabela -- Projetar os nomes e respectivos salários dos funcionários que ganham mais que a média salarial da empresa

@@ -158,7 +158,7 @@ INSERT INTO Gratificacao VALUES ('G008', 'Auxílio-creche');
 INSERT INTO Gratificacao VALUES ('G009', 'Participação nos lucros');
 
 INSERT INTO Funcionarios VALUES ('11111111', 'Carlos Silva', '3000.00', NULL, '1111', 'G001');
-INSERT INTO Funcionarios VALUES ('22222222', 'Mariana Costa', '3200.00', '11111111', '1111', NULL);
+INSERT INTO Funcionarios VALUES ('22222222', 'Mariana Costa', '3000.00', '11111111', '1111', NULL);
 INSERT INTO Funcionarios VALUES ('33333333', 'Roberto Lima', '3100.00', '11111111', '3333', 'G003');
 INSERT INTO Funcionarios VALUES ('44444444', 'Ana Souza', '2900.00', '22222222', '3333', 'G004');
 INSERT INTO Funcionarios VALUES ('55555555', 'Fernanda Rocha', '3050.00', '22222222', '5555', 'G005');
